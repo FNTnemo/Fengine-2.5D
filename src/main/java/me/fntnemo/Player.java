@@ -5,12 +5,18 @@ import me.fntnemo.Engine.Map;
 
 public class Player {
     public static int[] playerPos = {100, 100};
-    public static int playerSpeed = 7;
+    public static int z = 0;
+    public static int playerSpeed = 4;
     public static float playerDeltaAngle = 0.05f;
     public static float playerA = 0;
     public static double fov = Math.PI/3;
+    public static boolean isMove = false;
+    public static boolean isRunning = false;
 
     public static int playerSize = 20;
+
+    public static int testX;
+    public static int testY;
 
     public static void playerSpawn() {
         for (int x = 0; x < Map.mapSizeX; x++) {
@@ -60,6 +66,14 @@ public class Player {
             playerA -= playerDeltaAngle;
         } if(InputEngine.E){
             playerA += playerDeltaAngle;
+        }
+        if (InputEngine.SHIFT){
+            playerSpeed = 8;
+        } else {playerSpeed = 4;}
+        if (InputEngine.UP){
+            z += 1;
+        } else if (InputEngine.DOWN) {
+            z -= 1;
         }
     }
 }

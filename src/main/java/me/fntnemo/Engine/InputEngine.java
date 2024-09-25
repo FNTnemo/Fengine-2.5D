@@ -1,10 +1,6 @@
 package me.fntnemo.Engine;
 
 import me.fntnemo.Player;
-
-import javax.swing.plaf.PanelUI;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
@@ -16,6 +12,9 @@ public class InputEngine extends KeyAdapter {
     public static boolean D = false;
     public static boolean Q = false;
     public static boolean E = false;
+    public static boolean UP = false;
+    public static boolean DOWN = false;
+    public static boolean SHIFT = false;
 
     public static int keyP;
     public static int keyR;
@@ -30,17 +29,23 @@ public class InputEngine extends KeyAdapter {
         keyR = e.getKeyCode();
     }
     public static void checkPressedKeys(){
-        if(keyP == KeyEvent.VK_A){A = true;}
-        if(keyP == KeyEvent.VK_D){D = true;}
-        if(keyP == KeyEvent.VK_W){W = true;}
-        if(keyP == KeyEvent.VK_S){S = true;}
+        if(keyP == KeyEvent.VK_SHIFT){SHIFT = true; Player.isRunning = true;}
+        if(keyP == KeyEvent.VK_UP){UP = true;}
+        if(keyP == KeyEvent.VK_DOWN){DOWN = true;}
+        if(keyP == KeyEvent.VK_A){A = true; Player.isMove = true;}
+        if(keyP == KeyEvent.VK_D){D = true; Player.isMove = true;}
+        if(keyP == KeyEvent.VK_W){W = true; Player.isMove = true;}
+        if(keyP == KeyEvent.VK_S){S = true; Player.isMove = true;}
         if(keyP == KeyEvent.VK_Q){Q = true;}
         if(keyP == KeyEvent.VK_E){E = true;}
 
-        if(keyR == KeyEvent.VK_A){A = false;}
-        if(keyR == KeyEvent.VK_D){D = false;}
-        if(keyR == KeyEvent.VK_W){W = false;}
-        if(keyR == KeyEvent.VK_S){S = false;}
+        if(keyR == KeyEvent.VK_SHIFT){SHIFT = false; Player.isRunning = false;}
+        if(keyR == KeyEvent.VK_UP){UP = false;}
+        if(keyR == KeyEvent.VK_DOWN){DOWN = false;}
+        if(keyR == KeyEvent.VK_A){A = false; Player.isMove = false;}
+        if(keyR == KeyEvent.VK_D){D = false; Player.isMove = false;}
+        if(keyR == KeyEvent.VK_W){W = false; Player.isMove = false;}
+        if(keyR == KeyEvent.VK_S){S = false; Player.isMove = false;}
         if(keyR == KeyEvent.VK_Q){Q = false;}
         if(keyR == KeyEvent.VK_E){E = false;}
 
