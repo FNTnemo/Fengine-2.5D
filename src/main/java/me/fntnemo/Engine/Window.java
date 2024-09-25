@@ -13,7 +13,7 @@ public class Window extends JFrame {
         setTitle(title + version);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(width, height + 25);
-        setResizable(false);
+        setResizable(true);
         setVisible(true);
         setLocation((int) (screenWidth/2 - width/2), (int) (screenHeight/2 - height/2));
         //add-ons

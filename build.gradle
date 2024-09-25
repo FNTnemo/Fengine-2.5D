@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'me.fntnemo'
-version = 'a0.2'
+version = 'Alpha'
 
 repositories {
     mavenCentral()
