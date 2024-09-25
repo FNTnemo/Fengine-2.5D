@@ -15,5 +15,4 @@ public class RayCasting {
     } public static double getRayPosY(int depth, double angle){
         return Player.playerPos[1] + depth * Math.sin(angle);
     }
-
 }

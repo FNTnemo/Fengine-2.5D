@@ -61,6 +61,5 @@ public class Player {
         } if(InputEngine.E){
             playerA += playerDeltaAngle;
         }
-
     }
 }

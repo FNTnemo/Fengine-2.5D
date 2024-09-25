@@ -25,5 +25,4 @@ public class Map {
     public static char getMapChar(int x, int y, char[][] map){
         return map[y][x];
     }
-
 }

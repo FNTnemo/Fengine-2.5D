@@ -47,5 +47,4 @@ public class InputEngine extends KeyAdapter {
         keyP = 0;
         keyR = 0;
     }
-
 }

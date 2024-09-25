@@ -119,5 +119,4 @@ public class Render {
         //angle
         g.drawString("Player angle: " + Player.playerA, 10, Map.mapSizeY*10 + lineSpacing * 3);
     }
-
 }

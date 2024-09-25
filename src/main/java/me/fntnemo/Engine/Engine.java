@@ -30,6 +30,5 @@ public class Engine extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         Player.movement();
         InputEngine.checkPressedKeys();
-
     }
 }

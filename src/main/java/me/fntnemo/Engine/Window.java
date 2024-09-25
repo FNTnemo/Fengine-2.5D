@@ -18,6 +18,5 @@ public class Window extends JFrame {
         //add-ons
         add(new Engine());
         addKeyListener(new InputEngine());
-
     }
 }
